@@ -44,7 +44,7 @@ var tests = [{
 tester.test(tests, );
 ```
 
-#####EXAMPLE FOR createExposedInstance
+#####EXAMPLE FOR createExposedInstance()
 ```
 var Person = function() {
     //defaults
