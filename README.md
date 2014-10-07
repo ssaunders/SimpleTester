@@ -3,8 +3,7 @@ SimpleTester
 
 A very simple object with ability to assert, test for equality, and create an exposed instance of a JS class.
 
-EXAMPLE USAGE
-===
+*EXAMPLE USAGE*
 var tests = [{
     description: "(1,0) test with size 100,100 at 0,0",
     arguments: [{
@@ -41,10 +40,9 @@ var tests = [{
     expectedVal: [200,200]
 }];
 
-tester.test(tests, )
+tester.test(tests, );
 
-**** EXAMPLE FOR createExposedInstance ****
-===
+*EXAMPLE FOR createExposedInstance*
 var Person = function() {
     //defaults
     var _age  =  0,
