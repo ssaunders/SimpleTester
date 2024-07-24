@@ -28,7 +28,7 @@ function Tester() {
             result = "%cFAILED";
             css = 'color:red';
         }
-        console.log(result,css," - ",description," -   target: ",checkVal," actual:",testVal);
+        console.log(result,css,":",description,"- Target: ",checkVal," Actual:",testVal);
     };
 
     this.groupBegin = function(title) {
