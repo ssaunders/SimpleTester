@@ -1,4 +1,4 @@
-function Tester() {
+(function Tester() {
     this.runTests = function(tests, scope, testFn, title) {
         console.group(title);
 
@@ -131,4 +131,4 @@ function Tester() {
     };
 
     return this;
-}
+})();
