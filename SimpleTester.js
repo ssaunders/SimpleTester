@@ -1,4 +1,4 @@
-(function Tester() {
+function Tester() {
     this.runTests = function(tests, scope, testFn, title) {
         console.group(title);
 
@@ -38,11 +38,19 @@
         console.groupEnd();
     };
 
-    //Does not do multi-dim arrays
+    // Does not do multi-dim arrays
+    // Not sure how it will handle Symbols
     this.isEqual = function(one, two) {
         var oneType = typeof(one),
             twoType = typeof(two);
-        if( one === two ) return true;
+
+        if(oneType != twoType) return false;
+        
+        if(one === two) return true;
+
+        // We already confirmed the types are the same, and that they are not equal.
+        // So if it's a primitive type, that's sufficient for it to not be equal.
+        if(oneType === "string" || oneType === "number" || oneType === "boolean" || oneType === "bigint") return false;
 
         if(one instanceof Array && two instanceof Array) {
             var i = one.length;     //stackoverflow, Tim Down
@@ -131,4 +139,4 @@
     };
 
     return this;
-})();
+}
